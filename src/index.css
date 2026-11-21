@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import '@xyflow/react/dist/style.css';
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Override default React Flow node box styling so TableNode controls its own card chrome */
+.react-flow__node-table {
+  padding: 0;
+  border: none;
+  background: transparent;
+  width: auto;
+}
+
+/* Assure que les boutons placés via EdgeLabelRenderer restent cliquables au-dessus des SVG de liens */
+.react-flow__edgelabel-renderer {
+  z-index: 1001;
+}
